@@ -102,7 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1dcf248ab1e07479cdf8d489d7ff2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coneAngle: 140
+  coneDistance: 1.5
   fixZ: 4.9
+  coneHeight: 8
 --- !u!70 &8833094661959082871
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -136,8 +139,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.03, y: 0}
-  m_Size: {x: 0.15, y: 0.22}
-  m_Direction: 0
+  m_Size: {x: 0.29, y: 0.25}
+  m_Direction: 1
 --- !u!50 &-5072058098840848214
 Rigidbody2D:
   serializedVersion: 4
@@ -172,12 +175,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2567476586137038043}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d3f6ca68b944f5b42afa3fd82cbe1b52, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -14,11 +14,10 @@ GameObject:
   - component: {fileID: 8833094661959082871}
   - component: {fileID: -5072058098840848214}
   - component: {fileID: -6533975749707140019}
-  - component: {fileID: 7592525402414515920}
-  - component: {fileID: 98492498837304891}
+  - component: {fileID: 3276312530364481285}
   m_Layer: 8
-  m_Name: RedConeSpray
-  m_TagString: Red Spray Cone
+  m_Name: YellowConeSpray
+  m_TagString: Yellow Spray Cone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 69b545f8f1e8ef249a4ef42114b1f2b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02cd0afb150ba9e47bb74fc74a9133a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -264,82 +263,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!60 &7592525402414515920
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2567476586137038043}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 9.36, y: 7.65}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.26, y: -0.275}
-      - {x: 0.39999998, y: 0.055}
-      - {x: 0.42, y: 0.185}
-      - {x: 0.44, y: 0.295}
-      - {x: 0.45999998, y: 0.385}
-      - {x: 0.45999998, y: 0.815}
-      - {x: 0.39, y: 1.125}
-      - {x: 0.32999998, y: 1.3149999}
-      - {x: 0.26, y: 1.4549999}
-      - {x: 0.17999999, y: 1.555}
-      - {x: 0.08, y: 1.685}
-      - {x: 0.04, y: 1.685}
-      - {x: 0.01, y: 1.675}
-      - {x: -0.07, y: 1.625}
-      - {x: 0.022584736, y: 1.4683787}
-      - {x: 0.025127828, y: 1.2637237}
-      - {x: 0.046679378, y: 1.1769308}
-      - {x: 0.09723991, y: 0.9359653}
-      - {x: 0.08836079, y: 0.621793}
-      - {x: -0.01995802, y: 0.435}
-      - {x: 0.0031453967, y: 0.19344833}
-      - {x: -0.06716812, y: -0.3072577}
-      - {x: 0.16823119, y: -0.39613694}
-      - {x: 0.080213726, y: -0.53944767}
-      - {x: -0.11698437, y: -0.7308957}
-      - {x: -0.29999998, y: -0.885}
-      - {x: -0.26, y: -0.885}
-      - {x: -0.13112098, y: -0.77927595}
-      - {x: 0.07, y: -0.575}
-      - {x: 0.08745706, y: -0.54013765}
-  m_UseDelaunayMesh: 0
---- !u!95 &98492498837304891
+--- !u!95 &3276312530364481285
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -349,7 +273,7 @@ Animator:
   m_GameObject: {fileID: 2567476586137038043}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a8cf980b2780a5f4daeb310432fedd14, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8ec32cc982f6829449dd83fe093c2a8e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

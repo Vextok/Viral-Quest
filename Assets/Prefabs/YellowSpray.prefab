@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 63236925961665421}
   - component: {fileID: 7783714232465820190}
   m_Layer: 8
-  m_Name: RedSpray
-  m_TagString: Red Spray Bullet
+  m_Name: YellowSpray
+  m_TagString: Yellow Spray Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +261,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 17cd3678f4132d44aa9788aee7174435, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f38dbd02a6c7a244bb6afd2dd2c4aae9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -282,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8391156556153365010}
   - component: {fileID: 7474609159482906980}
-  - component: {fileID: 1406110575334026073}
+  - component: {fileID: 2312562320562151189}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -346,7 +346,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 17cd3678f4132d44aa9788aee7174435, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f38dbd02a6c7a244bb6afd2dd2c4aae9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -357,7 +357,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1406110575334026073
+--- !u!95 &2312562320562151189
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -367,7 +367,7 @@ Animator:
   m_GameObject: {fileID: 3964595883930464759}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d8933abe845a7044871b7b687f6f6fc, type: 2}
+  m_Controller: {fileID: 9100000, guid: b305c413b9755a3438216cab9b7db11f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -42590,6 +42590,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c458b98aca39bde4b8947409d0bf867b, type: 3}
+--- !u!114 &177518375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4091671381592751371, guid: c458b98aca39bde4b8947409d0bf867b, type: 3}
+  m_PrefabInstance: {fileID: 177518374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea92d7da49bc974a82921faafd685b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &182162595
 GameObject:
   m_ObjectHideFlags: 0
@@ -54486,7 +54497,7 @@ Transform:
   m_GameObject: {fileID: 1206410429}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.45, y: 6.35, z: -1.3873794}
+  m_LocalPosition: {x: 23.796, y: 6.022, z: -1.3873794}
   m_LocalScale: {x: 5.645266, y: 6.9858356, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64920,7 +64931,7 @@ MonoBehaviour:
   livesUI: {fileID: 1125823449}
   audioSource: {fileID: 1893802992}
   livesLost: {fileID: 8300000, guid: 5825f4106559af14dbd19970cc2f82e3, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 177518375}
   OneLifeLost: {fileID: 8300000, guid: 58e911e0b65a62a4586c233fa6ae4e0f, type: 3}
   gameOverUI: {fileID: 606223296}
 --- !u!4 &1893802994
@@ -65325,7 +65336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1577800139}
   sfxSource: {fileID: 724835924}
-  main_menu: {fileID: 8300000, guid: 7578367a7cec6e743b8228c3335b4e91, type: 3}
+  main_menu: {fileID: 8300000, guid: d527ee84cf827f047ae0063e77dd66a0, type: 3}
   background: {fileID: 8300000, guid: 0b021e926dcb8c242a894f820d1c4a54, type: 3}
   death: {fileID: 0}
   walking: {fileID: 8300000, guid: dca7ca39bc1eed540bbda69e2d5dc529, type: 3}
@@ -65334,6 +65345,8 @@ MonoBehaviour:
   BossTheme: {fileID: 8300000, guid: 943b394909e8db248a6992be8ee29e70, type: 3}
   StageClear: {fileID: 8300000, guid: 5cb10d7b0e1374c448009621246320b9, type: 3}
   level2: {fileID: 8300000, guid: d31b606881f343a4b8124fbcaa8dd251, type: 3}
+  GoodEnd: {fileID: 8300000, guid: 4af62202e2fd8fc49b88fb3c610f7cfd, type: 3}
+  BadEnd: {fileID: 8300000, guid: f26454c2204abd74eb929afea56899ad, type: 3}
 --- !u!1 &1924081112
 GameObject:
   m_ObjectHideFlags: 0

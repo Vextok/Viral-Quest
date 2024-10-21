@@ -298,7 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1457689389}
   sfxSource: {fileID: 188437972}
-  main_menu: {fileID: 8300000, guid: 7578367a7cec6e743b8228c3335b4e91, type: 3}
+  main_menu: {fileID: 8300000, guid: d527ee84cf827f047ae0063e77dd66a0, type: 3}
   background: {fileID: 8300000, guid: 0b021e926dcb8c242a894f820d1c4a54, type: 3}
   death: {fileID: 0}
   walking: {fileID: 8300000, guid: dca7ca39bc1eed540bbda69e2d5dc529, type: 3}
@@ -307,6 +307,8 @@ MonoBehaviour:
   BossTheme: {fileID: 8300000, guid: 943b394909e8db248a6992be8ee29e70, type: 3}
   StageClear: {fileID: 8300000, guid: 5cb10d7b0e1374c448009621246320b9, type: 3}
   level2: {fileID: 8300000, guid: d31b606881f343a4b8124fbcaa8dd251, type: 3}
+  GoodEnd: {fileID: 8300000, guid: 4af62202e2fd8fc49b88fb3c610f7cfd, type: 3}
+  BadEnd: {fileID: 8300000, guid: f26454c2204abd74eb929afea56899ad, type: 3}
 --- !u!1 &605600118
 GameObject:
   m_ObjectHideFlags: 0

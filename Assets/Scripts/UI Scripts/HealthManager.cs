@@ -13,6 +13,9 @@ public class HealthManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip livesLost;
     public PlayerMovement player;
+    public AudioClip OneLifeLost;
+    public GameObject gameOverUI;
+    //public GameObject pauseM;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,9 @@ public class HealthManager : MonoBehaviour
     public void RemoveLife(){
         if(lives > 0 && !isImmune){
             lives--;
+            audioSource.PlayOneShot(OneLifeLost, 2.0f);
             UpdateLivesScript();
+            //audioSource.PlayOneShot(OneLifeLost);
             //Debug.Log("Life removed. Lives remaining: " + lives);
             if (lives <= 0){
                 StartCoroutine(ResetLevel());
@@ -60,9 +65,16 @@ public class HealthManager : MonoBehaviour
         }
         if (audioSource != null && livesLost != null){
             audioSource.PlayOneShot(livesLost);
-            //yield return new WaitForSeconds(livesLost.length);
+            gameOverUI.SetActive(true);
+            yield return new WaitForSeconds(livesLost.length);
+            gameOverUI.SetActive(false);
         }
+        gameOverUI.SetActive(true);
         yield return new WaitForSeconds(livesLost.length);
+        gameOverUI.SetActive(false);
+        DataCollector.ResetLevelScores();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //pauseM.SetActive(true);
+        //pauseM.GetComponent<PauseMenu>().Restart();
     }
 }

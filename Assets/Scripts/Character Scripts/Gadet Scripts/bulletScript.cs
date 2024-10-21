@@ -6,8 +6,10 @@ public class bulletScript : MonoBehaviour
 {
     public float bulletSpeed = 20f;
     private Rigidbody2D rb;
-    float time = 0.0f;
+    //float time = 0.0f;
     public float fixZ = 5f;
+    private float flightTime = 0.3f;
+    private float spawnTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,18 +18,15 @@ public class bulletScript : MonoBehaviour
         Vector3 startPosition = transform.position;
         startPosition.z = fixZ;
         transform.position = startPosition;
+        spawnTime = Time.time;
     }
 
     void Update(){
         Vector3 position = transform.position;
         position.z = fixZ;
         transform.position = position;
-        time += Time.deltaTime;
-        int seconds = (int) time%60;
-        if(seconds >= 1){
-            time = 0;
-            seconds = 0;
-            Destroy(this.gameObject);
+        if(Time.time - spawnTime >= flightTime){
+            Destroy(gameObject);
         }
     }
 

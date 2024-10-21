@@ -3,7 +3,15 @@ guid: cea92d7da49bc974a82921faafd685b6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - body: {instanceID: 0}
+  - groundCheck: {instanceID: 0}
+  - animator: {instanceID: 0}
+  - healthManager: {instanceID: 0}
+  - hitMarker: {instanceID: 0}
+  - PauseMenu: {instanceID: 0}
+  - walkSource: {instanceID: 0}
+  - walk: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

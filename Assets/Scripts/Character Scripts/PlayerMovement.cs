@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public bool grounded;
     public bool facingLeft;
     public BoxCollider2D groundCheck;
-    public LayerMask groundMask;
+    private LayerMask groundMask;               //Made this private, again cuz it's working, now.
     public Animator animator;
     public HealthManager healthManager;
     private bool isFrozen = false;
@@ -20,14 +21,16 @@ public class PlayerMovement : MonoBehaviour
     public GameObject PauseMenu;
     PauseMenu pauseMenuScript;
     AudioManager audioManagerScript;
-    //public AudioSource walkSource;
-    //public AudioClip walk;
+    public AudioSource walkSource;
+    public AudioClip walk;
 
     // Start is called before the first frame update
     void Start() {
         GameObject audioManager = GameObject.FindGameObjectWithTag("Audio");
         pauseMenuScript = PauseMenu.GetComponent<PauseMenu>();
         audioManagerScript = audioManager.GetComponent<AudioManager>();
+        groundMask = 1001 << GameObject.Find("Ground - Tile Map").layer;        //This is why.
+        //Boss level has platforms that the boss can pass through, but the player can't.
     }
     // Update is called once per frame
     void Update() {
@@ -48,8 +51,17 @@ public class PlayerMovement : MonoBehaviour
 
     void GetInput() {
         // Get X and from A and D and Left and Right keys
-        if(!isFrozen){
-        xInput = Input.GetAxis("Horizontal");
+        if (!isFrozen) {
+        // Check for LeftArrow or RightArrow key presses
+        if (Input.GetKey(KeyCode.LeftArrow)) {
+            xInput = -1f;  // Move left
+        } 
+        else if (Input.GetKey(KeyCode.RightArrow)) {
+            xInput = 1f;   // Move right
+        } 
+        else {
+            xInput = 0f;   // No movement
+        }
     }
     }
 
@@ -58,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Abs(xInput) > 0) {
 
             // Change the x velocity
-            //walkAudio();
+            PlayWalkAudio();
             increment = xInput * acceleration;
             newSpeed = Mathf.Clamp(body.velocity.x + increment, -groundSpeed, groundSpeed);
             body.velocity = new Vector2(newSpeed, body.velocity.y);
@@ -81,17 +93,29 @@ public class PlayerMovement : MonoBehaviour
         // If no xInput, set condition for idle animation
         else if (Mathf.Abs(xInput) == 0)
         {
+            StopWalkAudio();
             animator.SetFloat("xVelocity", Mathf.Abs(xInput));
             animator.SetFloat("yVelocity", yInput);
         }
+        if(!grounded){
+            StopWalkAudio();
+        }
        
     }
-   /* IEnumerator walkAudio(){
-         walkSource.clip = walk;
-         walkSource.Play();
-         yield return new WaitForSeconds(1);
+    void PlayWalkAudio() {
+    if (!walkSource.isPlaying) {
+        walkSource.loop = true;
+        walkSource.clip = walk;
+        walkSource.Play();
+    }
+}
 
-    }*/
+    void StopWalkAudio() {
+        if (walkSource.isPlaying) {
+            walkSource.loop = false;
+            walkSource.Stop();
+        }
+    }
     void HandleJump() {
         // When the play presses spacebar on the ground, jump
         if (Input.GetButtonDown("Jump") && grounded)
@@ -128,6 +152,32 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Virus"))
+        {
+            if (healthManager != null)
+            {
+                healthManager.RemoveLife();
+                if (hitMarker != null)
+            {
+                Vector3 newPos = hitMarker.transform.localPosition;
+                if (facingLeft)
+                {
+                    newPos.x = -Mathf.Abs(newPos.x);
+                }
+                else
+                {
+                    newPos.x = Mathf.Abs(newPos.x);
+                }
+                hitMarker.transform.localPosition = newPos;
+
+                // Enable and show the Hit Marker
+                hitMarker.SetActive(true);
+                StartCoroutine(HidePoint(hitMarker));
+            }
+            }
+
+        }
+
+        if (collision.gameObject.CompareTag("Boss"))
         {
             if (healthManager != null)
             {

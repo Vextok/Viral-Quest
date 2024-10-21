@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public GameObject pauseButton;
+    //public GameObject pauseButton;
     public static bool GameIsPaused = false;
 
 
     public void Pause(){
         pauseMenu.SetActive(true);
-        pauseButton.SetActive(false);
+        //pauseButton.SetActive(false);
         Time.timeScale = 0;
         GameIsPaused = true;
     }
@@ -36,13 +36,17 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
     public void Restart(){
+        DataCollector.ResetLevelScores();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
     public void Resume(){
         pauseMenu.SetActive(false);
-        pauseButton.SetActive(true);
+        //pauseButton.SetActive(true);
         Time.timeScale = 1;
         GameIsPaused = false;
+    }
+
+    public void Options(){
     }
 }

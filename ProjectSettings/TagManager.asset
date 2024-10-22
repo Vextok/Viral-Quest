@@ -11,6 +11,12 @@ TagManager:
   - Virus
   - Pause
   - Audio
+  - Yellow Spray Bullet
+  - Grenade
+  - Boss
+  - Yellow Spray Cone
+  - Enemy Audio
+  - Bleach
   layers:
   - Default
   - TransparentFX
@@ -22,7 +28,7 @@ TagManager:
   - Ground
   - Spray
   - Enemy
-  - 
+  - Platforms
   - 
   - 
   - 
